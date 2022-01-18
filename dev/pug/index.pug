@@ -1,0 +1,92 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  // <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css' integrity='sha512-6c4nX2tn5KbzeBJo9Ywpa0Gkt+mzCzJBrE1RB6fmpcsoN+b/w/euwIMuQKNyUoU/nToKN3a8SgNOtPrbW12fug==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  link(href='css/styles.css' rel='stylesheet' type='text/css')
+  link(href='css/sweetalert2.min.css' rel="stylesheet" type='text/css')
+main#main.main
+  #all-users.all-users
+    .top-bar
+      h1.top-bar__title All User
+      .top-bar__buttons
+        .search
+          input(type="text" placeholder="Search User")#search-text
+        #user-info-button.top-bar__user-info
+          i.fa.fa-plus
+    #content.content
+      .content__header
+        input(type="checkbox" id="select-all-users")
+        input(type='hidden' value='0' name='tipo_op')#tipo_op.tipo_op
+        -const headers = ['name','surname','surname']
+
+        each header in headers
+          p.content__text.content__text--header= header 
+
+
+        a(href='#')
+        #delete-all-users.content__link.button.button--delete.button--hide
+          | Delete All
+          i.fa.fa-trash
+    #content-users.content__users
+    
+      //.content__user
+        input(type="checkbox" id="id-1").content__checkbox
+        p(data-name="Pedro").content__text Pedro
+        p.content__text Vanderlinder
+        p.content__text.content_text--email vandelinderstation@gmail.com
+        a(href='#').content__link.button.button--edit
+          | Edit
+          i.fa.fa-pencil-alt
+        a(href='#').content__link.button.button--delete
+          | Delete
+          i.fa.fa-trash
+      //.content__user
+        input(type="checkbox" id="id-2").content__checkbox
+        p(data-name="Pepe").content__text Pepe
+        p.content__text Garcias
+        p.content__text.content_text--email garcias@gmail.com
+        a(href='#').content__link.button.button--edit
+          | Edit
+          i.fa.fa-pencil-alt
+        a(href='#').content__link.button.button--delete
+          | Delete
+          i.fa.fa-trash
+    //content__user
+      input(type="checkbox" id="id-3").content__checkbox
+      p(data-name='Dorian').content__text Dorian
+      p.content__text Desing
+      p.content__text.content_text--email dorian@gmail.com
+      a(href='#').content__link.button.button--edit
+        | Edit
+        i.fa.fa-pencil-alt
+      a(href='#').content__link.button.button--delete
+        | Delete
+        i.fa.fa-trash
+  #user-info.user-info
+    .top-bar
+      h1#top-bar-title.top-bar__title New User
+    .content__user.content__user--user-info
+      label
+        | Name
+        input(type='text')#user-info-name.content__text
+        input(type='hidden' value='1' name='tipo_op')#tipo_op.tipo_op
+      label
+        | Surname
+        input(type='text')#user-info-surname.content__text
+      label
+        | Email
+        input(type='text')#user-info-email.content__text
+      a(href='#')#add-user.content__link.button.button--edit
+        | Add User
+        i.fa.fa-plus
+      a(href='#')#update-user.content__link.button.button--edit
+        | Edit User
+        i.fa.fa-pencil-alt
+      a(href='#').content__link.button.button--cancel
+        | Cancel
+        i.fa.fa-times
+script(src='js/index.js')
+script(src='js/sweetalert2.min.js')

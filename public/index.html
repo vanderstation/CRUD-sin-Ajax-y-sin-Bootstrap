@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+  <!-- Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css" integrity="sha512-6c4nX2tn5KbzeBJo9Ywpa0Gkt+mzCzJBrE1RB6fmpcsoN+b/w/euwIMuQKNyUoU/nToKN3a8SgNOtPrbW12fug==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="css/sweetalert2.min.css" rel="stylesheet" type="text/css">
+</head>
+<main class="main" id="main">
+  <div class="all-users" id="all-users">
+    <div class="top-bar">
+      <h1 class="top-bar__title">All User</h1>
+      <div class="top-bar__buttons">
+        <div class="search">
+          <input type="text" placeholder="Search User" id="search-text">
+        </div>
+        <div class="top-bar__user-info" id="user-info-button"><i class="fa fa-plus"></i></div>
+      </div>
+    </div>
+    <div class="content" id="content">
+      <div class="content__header">
+        <input type="checkbox" id="select-all-users">
+        <input class="tipo_op" type="hidden" value="0" name="tipo_op" id="tipo_op">
+        <p class="content__text content__text--header">name</p>
+        <p class="content__text content__text--header">surname</p>
+        <p class="content__text content__text--header">surname</p><a href="#"></a>
+        <div class="content__link button button--delete button--hide" id="delete-all-users">Delete All<i class="fa fa-trash"></i></div>
+      </div>
+    </div>
+    <div class="content__users" id="content-users">
+      <!--.content__user
+      input(type="checkbox" id="id-1").content__checkbox
+      p(data-name="Pedro").content__text Pedro
+      p.content__text Vanderlinder
+      p.content__text.content_text--email vandelinderstation@gmail.com
+      a(href='#').content__link.button.button--edit
+        | Edit
+        i.fa.fa-pencil-alt
+      a(href='#').content__link.button.button--delete
+        | Delete
+        i.fa.fa-trash
+      -->
+      <!--.content__user
+      input(type="checkbox" id="id-2").content__checkbox
+      p(data-name="Pepe").content__text Pepe
+      p.content__text Garcias
+      p.content__text.content_text--email garcias@gmail.com
+      a(href='#').content__link.button.button--edit
+        | Edit
+        i.fa.fa-pencil-alt
+      a(href='#').content__link.button.button--delete
+        | Delete
+        i.fa.fa-trash
+      -->
+    </div>
+    <!--content__user
+    input(type="checkbox" id="id-3").content__checkbox
+    p(data-name='Dorian').content__text Dorian
+    p.content__text Desing
+    p.content__text.content_text--email dorian@gmail.com
+    a(href='#').content__link.button.button--edit
+      | Edit
+      i.fa.fa-pencil-alt
+    a(href='#').content__link.button.button--delete
+      | Delete
+      i.fa.fa-trash
+    -->
+  </div>
+  <div class="user-info" id="user-info">
+    <div class="top-bar">
+      <h1 class="top-bar__title" id="top-bar-title">New User</h1>
+    </div>
+    <div class="content__user content__user--user-info">
+      <label>Name
+        <input class="content__text" type="text" id="user-info-name">
+        <input class="tipo_op" type="hidden" value="1" name="tipo_op" id="tipo_op">
+      </label>
+      <label>Surname
+        <input class="content__text" type="text" id="user-info-surname">
+      </label>
+      <label>Email
+        <input class="content__text" type="text" id="user-info-email">
+      </label><a class="content__link button button--edit" href="#" id="add-user">Add User<i class="fa fa-plus"></i></a><a class="content__link button button--edit" href="#" id="update-user">Edit User<i class="fa fa-pencil-alt"></i></a><a class="content__link button button--cancel" href="#">Cancel<i class="fa fa-times"></i></a>
+    </div>
+  </div>
+</main>
+<script src="js/index.js"></script>
+<script src="js/sweetalert2.min.js"></script>
